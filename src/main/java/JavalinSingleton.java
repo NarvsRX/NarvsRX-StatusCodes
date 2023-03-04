@@ -13,14 +13,9 @@ public class JavalinSingleton {
      */
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
-        
-
-        app.get("/client-side-err", ctx -> {
-        
-            //write logic here
-            
+        app.get("/request-was-accepted", ctx -> {
+            ctx.status(415);
         });
-
         return app;
     }
     
